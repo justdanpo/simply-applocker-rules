@@ -16,7 +16,8 @@ call :addrule "1853b5f1-f3b7-4b84-b59d-7d233cfcfc9b", "2GISTrayNotifier", "O=DOU
 call :addrule "b302bc38-50db-cd57-430a-05dd7b4a3a77", "AlterGeo", "O=WI2GEO LTD, L=MOSCOW, S=MOSCOW, C=RU"
 
 call :addrule "2cbb5bea-2787-43ec-b5c3-d96b5bf3ba05", "AnVir", "O=ANVIR SOFTWARE, L=MOSCOW, S=MOSCOW, C=RU", "*", "*" ^
-	, "ProductName=""ANVIR TASK MANAGER"" BinaryName=""ANVIR.EXE""", "LowSection=""6.7.0.0"" HighSection=""*"""
+	, "ProductName=""ANVIR TASK MANAGER"" BinaryName=""ANVIR.EXE""", "LowSection=""6.7.0.0"" HighSection=""*""" ^
+	, "ProductName=""ANVIR TASK MANAGER"" BinaryName=""ANVIR64.EXE""", "LowSection=""6.7.0.0"" HighSection=""*"""
 
 call :addrule "46914bbc-204f-300a-6035-90e81e4b6c44", "AOL", "O=AOL INC., L=DULLES, S=VIRGINIA, C=US"
 call :addrule "005bc9ce-bf0b-4cd4-8f46-a02dd63579ce", "Подписано O=APP BUD, L=SANTA MONICA, S=CALIFORNIA, C=US", "O=APP BUD, L=SANTA MONICA, S=CALIFORNIA, C=US"
