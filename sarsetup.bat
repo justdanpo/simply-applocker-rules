@@ -167,4 +167,5 @@ exit /b
 :installyb
 powershell -Command " Import-Module AppLocker ; Set-AppLockerPolicy -XMLPolicy %fname% " 
 sc config AppIDSvc start= auto
+net stop AppIDSvc
 net start AppIDSvc
