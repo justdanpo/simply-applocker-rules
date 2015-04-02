@@ -22,6 +22,8 @@ call :addrule "2cbb5bea-2787-43ec-b5c3-d96b5bf3ba05", "AnVir", "O=ANVIR SOFTWARE
 call :addrule "46914bbc-204f-300a-6035-90e81e4b6c44", "AOL", "O=AOL INC., L=DULLES, S=VIRGINIA, C=US"
 call :addrule "005bc9ce-bf0b-4cd4-8f46-a02dd63579ce", "Подписано O=APP BUD, L=SANTA MONICA, S=CALIFORNIA, C=US", "O=APP BUD, L=SANTA MONICA, S=CALIFORNIA, C=US"
 call :addrule "9428d01d-597b-d0f4-4467-1e853dd706f6", "ASK", "O=ASK.COM, L=OAKLAND, S=CALIFORNIA, C=US"
+call :addrule "1f904f9b-728e-4240-8e6c-de6476ece7a7", "Подписано O=BAIDU ONLINE NETWORK TECHNOLOGY (BEIJING)CO., LTD, L=BEIJING, S=BEIJING, C=CN", "O=BAIDU ONLINE NETWORK TECHNOLOGY (BEIJING)CO., LTD, L=BEIJING, S=BEIJING, C=CN"
+call :addrule "98cba2b6-f4f6-4d62-bb7e-f2d37c3b5264", "Подписано O=BEIJING AMAZGAME AGE INTERNET TECHNOLOGY CO., LTD., L=BEIJING, S=BEIJING, C=CN", "O=BEIJING AMAZGAME AGE INTERNET TECHNOLOGY CO., LTD., L=BEIJING, S=BEIJING, C=CN"
 call :addrule "15c91ac2-877f-4fa3-beaa-1fe1f998cc13", "BROWSEBIT malware", "O=BROWSEBIT, L=SANTA MONICA, S=CALIFORNIA, C=US"
 call :addrule "12014465-3e86-4504-a28d-6ed66f650633", "ClientConnect LTD", "O=ClientConnect LTD, L=Ness Ziona, S=Israel', C=IL"
 call :addrule "19b6ae09-1a65-3707-cb5f-91e0af523108", "CNET", "O=CBS INTERACTIVE, L=SAN FRANCISCO, S=CALIFORNIA, C=US"
@@ -31,6 +33,7 @@ call :addrule "3d78af8a-36a6-426e-9685-6c33abc36833", "Giner (SearchProtect/XTAB
 call :addrule "e7980077-85fa-5b81-f712-ee53b2f78986", "Hamster", "O=HAMSTER SOFT, L=MOSCOW, S=MOSCOW, C=RU"
 call :addrule "1e416e55-2791-bb27-3f5d-caed11989d1d", "ICQ", "O=ICQ, L=TEL AVIV, S=ISRAEL, C=IL"
 call :addrule "aa44a8aa-d36d-402f-af4d-a93c40739189", "ICQ", "O=ICQ LTD, L=TEL AVIV, S=ALBERTA, C=IL"
+call :addrule "55acff86-e4fa-4d9f-9185-ec692b4309f0", "Подписано O=KOMETA LLC, L=MOSCOW, S=MOSCOW REGION, C=RU", "O=KOMETA LLC, L=MOSCOW, S=MOSCOW REGION, C=RU"
 
 call :addrule "a3b33e8f-62de-0e8e-cc24-b8b16193adbc", "Mail", "O=LLC MAIL.RU, L=MOSCOW, S=MOSCOW, C=RU", "*", "*" ^
 	, "ProductName=""MAIL.RU АГЕНТ"" BinaryName=""MAGENT.EXE""", "LowSection=""6.0.0.0"" HighSection=""*"""
