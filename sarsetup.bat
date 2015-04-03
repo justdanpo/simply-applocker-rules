@@ -8,6 +8,14 @@ echo ^<AppLockerPolicy Version="1"^> > %fname%
 echo   ^<RuleCollection Type="Dll" EnforcementMode="NotConfigured" /^> >> %fname%
 echo   ^<RuleCollection Type="Script" EnforcementMode="NotConfigured" /^> >> %fname%
 
+echo   ^<RuleCollection Type="Appx" EnforcementMode="Enabled"^> >> %fname%
+echo     ^<FilePathRule Id="0a233466-ebac-40c8-ab14-ff4756c58684" Name="Все" Description="" UserOrGroupSid="S-1-1-0" Action="Allow"^> >> %fname%
+echo       ^<Conditions^> >> %fname%
+echo         ^<FilePathCondition Path="*" /^> >> %fname%
+echo       ^</Conditions^> >> %fname%
+echo     ^</FilePathRule^> >> %fname%
+echo   ^</RuleCollection^> >> %fname%
+
 echo   ^<RuleCollection Type="Exe" EnforcementMode="Enabled"^> >> %fname%
 
 rem --------------------------------------------------------------------------------------------------------
