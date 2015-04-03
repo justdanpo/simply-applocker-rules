@@ -68,6 +68,7 @@ call :addrule "c8256597-c742-48d7-b8d7-c663579ed471", "Подписано O=TUTO
 call :addrule "63432a8b-bb11-cf87-d9e0-99f3c31519c6", "Uniblue", "O=UNIBLUE SYSTEMS, L=MSIDA, S=MSIDA, C=MT"
 call :addrule "60585edf-6e18-42f9-b808-e4741f0768aa", "Подписано O=UPDATESTAR GMBH, L=BERLIN, S=BERLIN, C=DE", "O=UPDATESTAR GMBH, L=BERLIN, S=BERLIN, C=DE"
 call :addrule "9503ca90-a0ef-4901-bf1f-e6369af328ef", "Webalta toolbar", "O=INTERTECH LTD, L=ST. PETERSBURG, S=ST. PETERSBURG, C=RU"
+call :addrule "8b9f3c3c-dc5a-48c4-8ca5-b9f252bae2dd", "WINDOWS SYSTOOL  SERVICE", "O=CHERISHED TECHNOLOGY LIMITED, L=香港, S=香港, C=HK"
 call :addrule "b2578909-be98-29e2-8a6d-cdde96164240", "Yahoo", "O=YAHOO! INC., L=SANTA CLARA, S=CA, C=US"
 call :addrule "3701715b-a211-ff1e-7668-129691f0f8a4", "Yandex", "O=OOO YANDEX, L=MOSCOW, S=MOSCOW, C=RU"
 
@@ -120,6 +121,7 @@ call :addrule "b755212e-78c1-3244-3d75-6dccc5692553", "SweetIM", "O=SWEETIM TECH
 call :addrule "ba4631cf-ab8a-7d3b-144e-6e923e5eaa89", "Symantec", "O=SYMANTEC CORPORATION, L=SANTA MONICA, S=CALIFORNIA, C=US"
 call :addrule "87628193-2dc8-4165-9234-e8d2cddcf55b", "techgile", "O=TECHGILE, L=SANTA MONICA, S=CALIFORNIA, C=US"
 call :addrule "eb83ea8e-cf5d-64e6-5dc9-da63a40534d7", "Uniblue", "O=UNIBLUE SYSTEMS, L=MSIDA, S=MSIDA, C=MT"
+call :addrule "f487ebbb-e5d4-42ea-a189-c22dd5bc06d5", "WINDOWS SYSTOOL  SERVICE", "O=CHERISHED TECHNOLOGY LIMITED, L=香港, S=香港, C=HK"
 call :addrule "11cbc4c0-be77-8124-25a0-fea7d572a101", "Yahoo", "O=YAHOO! INC., L=SANTA CLARA, S=CA, C=US"
 call :addrule "361d7116-e31f-7225-c13b-bf8b5f875b3a", "Yandex", "O=OOO YANDEX, L=MOSCOW, S=MOSCOW, C=RU"
 
