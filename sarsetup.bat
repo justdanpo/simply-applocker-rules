@@ -54,6 +54,7 @@ call :addrule "4627afe3-3034-b375-a917-a86534fdd7ff", "McAfee", "O=MCAFEE, INC.,
 call :addrule "d1c7d78c-e1e0-44de-923e-8832a7353558", "MediaGet", "O=OOO SOFT-MEDIA, L=IRKUTSK GOROD, S=MOSCOW, C=RU"
 call :addrule "fce59a6f-e89d-23f8-5286-f4999ef2e72b", "MediaGet", "O=MEDIA GET LLC, L=SAINT-PETERSBURG, S=RUSSIA, C=RU"
 call :addrule "d6a01c41-0e6e-7c59-6e3a-5145139d1381", "Messenger Plus", "O=YUNA SOFTWARE LIMITED, L=ST. HELIER, S=JERSEY, C=GB"
+call :addrule "e4799766-4794-4185-bfaa-82c0afb281fa", "Montiera Technologies", "O=MONTIERA TECHNOLOGIES LTD, STREET=&quot;18, AMAMMI ST&quot;, L=EVEN YEHUDA, S=HASHARON, POSTALCODE=40500, C=IL"
 call :addrule "99e884bf-b5f3-430c-9238-40574721ad6e", "Подписано O=MINDSPARK INTERACTIVE NETWORK, L=WHITE PLAINS, S=NEWYORK, C=US", "O=MINDSPARK INTERACTIVE NETWORK, L=WHITE PLAINS, S=NEWYORK, C=US"
 call :addrule "bdbb131e-b1d2-4704-ac90-cb4af6305af9", "PortRu", "O=OOO PORT.RU, L=MOSCOW, S=MOSCOW, C=RU"
 call :addrule "984ab146-2b51-84db-9e73-f20d48cea7a8", "QIP", "O=OOO RUSSKIE INTERNET RESHENIJA, L=MOSCOW, S=MOSCOW, C=RU"
@@ -74,6 +75,7 @@ call :addrule "63432a8b-bb11-cf87-d9e0-99f3c31519c6", "Uniblue", "O=UNIBLUE SYST
 call :addrule "60585edf-6e18-42f9-b808-e4741f0768aa", "Подписано O=UPDATESTAR GMBH, L=BERLIN, S=BERLIN, C=DE", "O=UPDATESTAR GMBH, L=BERLIN, S=BERLIN, C=DE"
 call :addrule "9503ca90-a0ef-4901-bf1f-e6369af328ef", "Webalta toolbar", "O=INTERTECH LTD, L=ST. PETERSBURG, S=ST. PETERSBURG, C=RU"
 call :addrule "8b9f3c3c-dc5a-48c4-8ca5-b9f252bae2dd", "WINDOWS SYSTOOL  SERVICE", "O=CHERISHED TECHNOLOGY LIMITED, L=香港, S=香港, C=HK"
+call :addrule "2f7e7563-fb06-498c-8a61-93271563a82c", "Woodtale Technology Inc", "O=WOODTALE TECHNOLOGY INC, L=WILMINGTON, S=DELAWARE, C=US"
 call :addrule "b2578909-be98-29e2-8a6d-cdde96164240", "Yahoo", "O=YAHOO! INC., L=SANTA CLARA, S=CA, C=US"
 call :addrule "3701715b-a211-ff1e-7668-129691f0f8a4", "Yandex", "O=OOO YANDEX, L=MOSCOW, S=MOSCOW, C=RU"
 
@@ -120,6 +122,7 @@ call :addrule "c2a62dd9-e7de-338a-fb17-c4e96092284c", "McAfee", "O=MCAFEE, INC.,
 call :addrule "1d0108dd-b76d-ee4c-d6e7-8196420a7da7", "MediaGet", "O=MEDIA GET LLC, L=SAINT-PETERSBURG, S=RUSSIA, C=RU"
 call :addrule "d1c7d78c-e1e0-44de-923e-8832a7353559", "MediaGet", "O=OOO SOFT-MEDIA, L=IRKUTSK GOROD, S=MOSCOW, C=RU"
 call :addrule "c8a2d46f-0634-cdff-307e-2bc7a909a8e3", "Messenger Plus", "O=YUNA SOFTWARE LIMITED, L=ST. HELIER, S=JERSEY, C=GB"
+call :addrule "9817197d-f8a7-49e1-bcc4-1fa35fd0f0f4", "Montiera Technologies", "O=MONTIERA TECHNOLOGIES LTD, STREET=&quot;18, AMAMMI ST&quot;, L=EVEN YEHUDA, S=HASHARON, POSTALCODE=40500, C=IL"
 call :addrule "70b45e67-cea9-c02a-2aca-6c3a575ccee2", "PortRu", "O=OOO PORT.RU, L=MOSCOW, S=MOSCOW, C=RU"
 call :addrule "147f1b7f-a302-6aab-6d6e-bb094354c769", "QIP", "O=OOO RUSSKIE INTERNET RESHENIJA, L=MOSCOW, S=MOSCOW, C=RU"
 call :addrule "2b354789-147c-775e-9343-75941e2fe243", "Rambler", "O=RAMBLER INTERNET HOLDINGS, LLC, L=MOSCOW, S=MOSCOW, C=RU"
@@ -132,6 +135,7 @@ call :addrule "ba4631cf-ab8a-7d3b-144e-6e923e5eaa89", "Symantec", "O=SYMANTEC CO
 call :addrule "87628193-2dc8-4165-9234-e8d2cddcf55b", "techgile", "O=TECHGILE, L=SANTA MONICA, S=CALIFORNIA, C=US"
 call :addrule "eb83ea8e-cf5d-64e6-5dc9-da63a40534d7", "Uniblue", "O=UNIBLUE SYSTEMS, L=MSIDA, S=MSIDA, C=MT"
 call :addrule "f487ebbb-e5d4-42ea-a189-c22dd5bc06d5", "WINDOWS SYSTOOL  SERVICE", "O=CHERISHED TECHNOLOGY LIMITED, L=香港, S=香港, C=HK"
+call :addrule "c0f3c580-2875-44e4-8f18-f4751323e1aa", "Woodtale Technology Inc", "O=WOODTALE TECHNOLOGY INC, L=WILMINGTON, S=DELAWARE, C=US"
 call :addrule "11cbc4c0-be77-8124-25a0-fea7d572a101", "Yahoo", "O=YAHOO! INC., L=SANTA CLARA, S=CA, C=US"
 call :addrule "361d7116-e31f-7225-c13b-bf8b5f875b3a", "Yandex", "O=OOO YANDEX, L=MOSCOW, S=MOSCOW, C=RU"
 
@@ -154,14 +158,14 @@ goto :installyb
 
 
 :addrule
-set productname=*
-set binaryname=*
-if not a%4==a set productname=%~4
-if not a%5==a set binaryname=%~5
-set publishername=%~3
+set productname="*"
+set binaryname="*"
+if not a%4==a set productname="%~4"
+if not a%5==a set binaryname="%~5"
+set publishername="%~3"
 echo     ^<FilePublisherRule Id=%1 Name=%2 Description="" UserOrGroupSid="S-1-1-0" Action="Deny"^> >> %fname%
 echo       ^<Conditions^> >> %fname%
-echo         ^<FilePublisherCondition PublisherName="%publishername%" ProductName="%productname%" BinaryName="%binaryname%"^> >> %fname%
+echo         ^<FilePublisherCondition PublisherName=%publishername% ProductName=%productname% BinaryName=%binaryname%^> >> %fname%
 echo           ^<BinaryVersionRange LowSection="*" HighSection="*" /^> >> %fname%
 echo         ^</FilePublisherCondition^> >> %fname%
 echo       ^</Conditions^> >> %fname%
@@ -174,7 +178,7 @@ rem if not a%6==a (
 	set ever="LowSection=""*"" HighSection=""*"""
 	if not a%7==a set ever=%~7
 	set ever=%ever:""="%
-	echo         ^<FilePublisherCondition PublisherName="%publishername%" %econdition%^> >> %fname%
+	echo         ^<FilePublisherCondition PublisherName=%publishername% %econdition%^> >> %fname%
 	echo           ^<BinaryVersionRange %ever% /^> >> %fname%
 	echo         ^</FilePublisherCondition^> >> %fname%
 	if not a%8==a (
