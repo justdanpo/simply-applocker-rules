@@ -1,9 +1,4 @@
-;@echo off
-;chcp 65001 >nul
-;set sarsetup_args=%*
-;findstr -bv ; %0 | powershell -c -
-;goto :eof
-
+@chcp 65001 > nul & set sarsetup_args=%* & powershell -c "(gc \"%0\" -encoding UTF8) -replace \"@chcp 65001\",\"#\"" | powershell -c - & goto :eof
 
 # based on yandex.ban.xml
 
