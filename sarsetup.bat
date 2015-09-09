@@ -1,4 +1,4 @@
-@chcp 65001 > nul & set sarsetup_args=%* & powershell -c "(gc \"%0\" -encoding UTF8) -replace \"@chcp 65001\",\"#\"" | powershell -c - & goto :eof
+@chcp 65001 > nul & set sarsetup_args=%* & set sarsetup_self=%~0& powershell -c "(gc \"%0\" -encoding UTF8) -replace \"@chcp 65001\",\"#\"" | powershell -c - & goto :eof
 
 # based on yandex.ban.xml
 
@@ -98,7 +98,7 @@ $rules = @{
   </RuleCollection>
   <RuleCollection Type="Exe" EnforcementMode="Enabled">`n
 "@
-"Msi" = 
+"Msi" =
 @"
     <FilePathRule Id="5993d5ce-0ac1-4d76-bde7-cfa1f173cfbb" Name="Все" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
@@ -260,7 +260,7 @@ param(
       if(-not $condition) { break }
       if($condition -eq "addrule") { Write-Error "wrong rule $id $name"; exit }
       $version = $args[$i++]; if(-not $version) { $version = "LowSection=""*"" HighSection=""*""" }
-      
+
       $ret += @"
         <FilePublisherCondition PublisherName="$publishername" $condition>
           <BinaryVersionRange $version />
@@ -284,24 +284,62 @@ function addrules {
   addrule  "Msi"  @args
 }
 
+function SaveFile {
+  DoRules
+  $rules["Exe"] + $rules["Msi"] + $rules["Footer"] | Out-File $fname -encoding utf8
+}
+
+function GetAdminRights {
+  $Identity = [System.Security.Principal.WindowsIdentity]::GetCurrent()
+  $Principal = New-Object System.Security.Principal.WindowsPrincipal($Identity)
+  if (!($Principal.IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator)))
+  {
+    if ((Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System).EnableLua -ne 0)
+    {
+      Start-Process cmd -verb runas -argumentlist "/c ""$env:sarsetup_self"""
+    }
+    else
+    {
+      Write-Error "You must be administrator to run this script"
+    }
+    exit
+  }
+}
+
 
 
 if($env:sarsetup_args -imatch "help|\?") { Write-Host "arguments: help | saveonly | merge"; exit }
 
-DoRules
-$rules["Exe"] + $rules["Msi"] + $rules["Footer"] | Out-File $fname -encoding utf8
-
-
-if($env:sarsetup_args -imatch "saveonly") { exit }
-
-
-Import-Module AppLocker
-
-if( $env:sarsetup_args -imatch "merge" ) { 
-  Set-AppLockerPolicy -XMLPolicy $fname -Merge
-} else {
-  Set-AppLockerPolicy -XMLPolicy $fname
+if($env:sarsetup_args -imatch "saveonly") {
+  SaveFile
+  exit
 }
 
-set-service AppIDSvc -StartupType Auto
-Restart-Service AppIDSvc
+GetAdminRights
+
+try
+{
+  $dir=split-path $env:sarsetup_self -parent
+  $fname = $dir + "\" + $fname
+  SaveFile
+
+  Import-Module AppLocker
+
+  if( $env:sarsetup_args -imatch "merge" ) {
+    Set-AppLockerPolicy -XMLPolicy $fname -Merge
+  } else {
+    Set-AppLockerPolicy -XMLPolicy $fname
+  }
+
+  set-service AppIDSvc -StartupType Auto
+  Restart-Service AppIDSvc
+
+  Write-Host "OK"
+}
+catch
+{
+  $error[0]
+}
+
+Write-Host -NoNewLine "Press any key to continue..."
+$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
