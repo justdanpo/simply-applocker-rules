@@ -11,13 +11,16 @@ function DoRules {
 
   addrules "AnVir"  "O=ANVIR SOFTWARE, L=MOSCOW, S=MOSCOW, C=RU"  "*"  "*" `
           "ProductName=""ANVIR TASK MANAGER"" BinaryName=""ANVIR.EXE"""  "LowSection=""6.7.0.0"" HighSection=""*""" `
-          "ProductName=""ANVIR TASK MANAGER"" BinaryName=""ANVIR64.EXE"""  "LowSection=""6.7.0.0"" HighSection=""*"""
+          "ProductName=""ANVIR TASK MANAGER"" BinaryName=""ANVIR64.EXE"""  "LowSection=""6.7.0.0"" HighSection=""*""" `
+          "ProductName=""ANVIR TASK MANAGER FREE"" BinaryName=""ANVIR.EXE"""  "LowSection=""7.5.2.0"" HighSection=""*"""
 
   addrules "AOL"  "O=AOL INC., L=DULLES, S=VIRGINIA, C=US"
 
   addrules "Подписано O=APP BUD, L=SANTA MONICA, S=CALIFORNIA, C=US"  "O=APP BUD, L=SANTA MONICA, S=CALIFORNIA, C=US"
 
   addrules "ASK"  "O=ASK.COM, L=OAKLAND, S=CALIFORNIA, C=US"
+  addrules "ASK"  "O=ASK.COM, L=OAKLAND, S=CA, C=US"
+  addrules "ASK network"  "O=APN LLC, L=OAKLAND, S=CALIFORNIA, C=US"
   addrules "Подписано O=BAIDU ONLINE NETWORK TECHNOLOGY (BEIJING)CO., LTD, L=BEIJING, S=BEIJING, C=CN"  "O=BAIDU ONLINE NETWORK TECHNOLOGY (BEIJING)CO., LTD, L=BEIJING, S=BEIJING, C=CN"
   addrules "Подписано O=BEIJING AMAZGAME AGE INTERNET TECHNOLOGY CO., LTD., L=BEIJING, S=BEIJING, C=CN"  "O=BEIJING AMAZGAME AGE INTERNET TECHNOLOGY CO., LTD., L=BEIJING, S=BEIJING, C=CN"
   addrules "BROWSEBIT malware"  "O=BROWSEBIT, L=SANTA MONICA, S=CALIFORNIA, C=US"
@@ -35,6 +38,8 @@ function DoRules {
   addrules "Hamster"  "O=HAMSTER SOFT, L=MOSCOW, S=MOSCOW, C=RU"
   addrules "Hamster"  "O=LLC 'HAMSTERSOFT', L=MOSCOW, S=MOSCOW, C=RU"
   addrules "Hamster"  "O=HAMSTERSOFT LLC, L=MOSCOW, S=MOSCOW, C=RU"
+  addrules "IAC"  "O=IAC SEARCH AND MEDIA, L=OAKLAND, S=CALIFORNIA, C=US"
+  addrules "IAC"  "O=IAC, L=WHITE PLAINS, S=NEW YORK, C=US"
   addrules "ICQ"  "O=ICQ, L=TEL AVIV, S=ISRAEL, C=IL"
   addrules "ICQ"  "O=ICQ LTD, L=TEL AVIV, S=ALBERTA, C=IL"
   addrules "Подписано O=KOMETA LLC, L=MOSCOW, S=MOSCOW REGION, C=RU"  "O=KOMETA LLC, L=MOSCOW, S=MOSCOW REGION, C=RU"
@@ -43,6 +48,9 @@ function DoRules {
           "ProductName=""MAIL.RU АГЕНТ"" BinaryName=""MAGENT.EXE"""  "LowSection=""6.0.0.0"" HighSection=""*"""
 
   addrules "McAfee"  "O=MCAFEE, INC., L=SANTA CLARA, S=CALIFORNIA, C=US"
+  addrules "MediaGet"  "O=&quot;MEDIA, LLC&quot;, L=ST. PETERSBURG, S=RUSSIAN FEDERATION, C=RU"
+  addrules "MediaGet"  "O=BANNER LLC, L=ST.PETERSBURG, S=RUSSIA, C=RU"
+  addrules "MediaGet"  "O=INBOX OOO, L=MOSCOW, S=MOSCOW, C=RU"
   addrules "MediaGet"  "O=OOO SOFT-MEDIA, L=IRKUTSK GOROD, S=MOSCOW, C=RU"
   addrules "MediaGet"  "O=MEDIA GET LLC, L=SAINT-PETERSBURG, S=RUSSIA, C=RU"
   addrules "Messenger Plus"  "O=YUNA SOFTWARE LIMITED, L=ST. HELIER, S=JERSEY, C=GB"
