@@ -1,4 +1,4 @@
-@chcp 65001 > nul & set sarsetup_args=%* & set sarsetup_self=%~0& powershell -c "(gc \"%0\" -encoding UTF8) -replace \"@chcp 65001\",\"#\"" | powershell -c - & goto :eof
+@chcp 65001 > nul & set sarsetup_args=%* & set sarsetup_self=%~0& powershell -c "(gc \"%~0\" -encoding UTF8) -replace '@chcp 65001.*','#' | Write-Host" | powershell -c - & goto :eof
 
 # based on yandex.ban.xml
 
@@ -339,7 +339,7 @@ try
     Set-AppLockerPolicy -XMLPolicy $fname
   }
 
-  set-service AppIDSvc -StartupType Auto
+  set-service AppIDSvc -StartupType Automatic
   Restart-Service AppIDSvc
 
   Write-Host "OK"
