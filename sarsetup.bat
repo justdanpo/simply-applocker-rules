@@ -1,4 +1,4 @@
-@chcp 65001 > nul & set sarsetup_args=%* & set sarsetup_self=%~0& powershell -c "(gc \"%~0\" -encoding UTF8) -replace '@chcp 65001.*','#' | Write-Host" | powershell -c - & goto :eof
+@chcp 65001 > nul & set sarsetup_args=%* & set sarsetup_self=%~f0& powershell -c "(gc \"%~f0\" -encoding UTF8) -replace '@chcp 65001.*','#' | Write-Host" | powershell -c - & goto :eof
 
 # based on yandex.ban.xml
 
@@ -310,7 +310,7 @@ function GetAdminRights {
   {
     if ((Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System).EnableLua -ne 0)
     {
-      Start-Process cmd -verb runas -argumentlist "/c ""$env:sarsetup_self"""
+      Start-Process "$env:ComSpec" -verb runas -argumentlist "/c ""$env:sarsetup_self"""
     }
     else
     {
@@ -320,6 +320,15 @@ function GetAdminRights {
   }
 }
 
+function CheckSysWow {
+  if ([environment]::Is64BitOperatingSystem -ne [environment]::Is64BitProcess)
+  {
+    Start-Process "$env:SystemRoot\sysnative\cmd.exe" -wait -NoNewWindow -argumentlist "/c ""$env:sarsetup_self"""
+    exit
+  }
+}
+
+#--------------------------------------------------------------
 
 
 if($env:sarsetup_args -imatch "help|\?") { Write-Host "arguments: help | saveonly | merge"; exit }
@@ -329,6 +338,7 @@ if($env:sarsetup_args -imatch "saveonly") {
   exit
 }
 
+CheckSysWow
 GetAdminRights
 
 try
