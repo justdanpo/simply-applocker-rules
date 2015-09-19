@@ -1,4 +1,4 @@
-@chcp 65001 > nul & set sarsetup_args=%* & set sarsetup_self=%~f0& powershell -c "(gc \"%~f0\" -encoding UTF8) -replace '@chcp 65001.*','#' | Write-Host" | powershell -v 2.0 -c - & goto :eof
+@chcp 65001 > nul & set sarsetup_args=%* & set sarsetup_self=%~f0& powershell -c "(gc \"%~f0\" -encoding UTF8) -replace '@chcp 65001.*','#' | Write-Host" | powershell -c - & goto :eof
 
 # based on yandex.ban.xml
 
