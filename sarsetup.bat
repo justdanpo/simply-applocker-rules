@@ -1,4 +1,4 @@
-@chcp 65001 > nul & set sarsetup_args=%* & set sarsetup_self=%~f0& powershell -c "(gc \"%~f0\" -encoding UTF8) -replace '@chcp 65001.*','#' | Write-Host" | powershell -c - & goto :eof
+@chcp 65001 > nul & set sarsetup_args=%* & set sarsetup_self=%~f0& powershell -c "(gc \"%~f0\" -encoding UTF8) -replace '@chcp 65001.*','#' | Write-Host" | powershell -v 2.0 -c - & goto :eof
 
 # based on yandex.ban.xml
 
@@ -321,7 +321,7 @@ function GetAdminRights {
 }
 
 function CheckSysWow {
-  if ([environment]::Is64BitOperatingSystem -ne [environment]::Is64BitProcess)
+  if( ([IntPtr]::Size -eq 8) -ne ((gwmi Win32_OperatingSystem).OSArchitecture -match "64") )
   {
     Start-Process "$env:SystemRoot\sysnative\cmd.exe" -wait -NoNewWindow -argumentlist "/c ""$env:sarsetup_self"""
     exit
