@@ -89,7 +89,8 @@ function DoRules {
 
   addrules "Yandex"  "O=YANDEX LLC, L=MOSCOW, S=MOSCOW, C=RU"  "*"  "*" `
           "ProductName=""YANDEX"" BinaryName=""BROWSER.EXE"""  "LowSection=""*"" HighSection=""*""" `
-          "ProductName=""YANDEX INSTALLER"" BinaryName=""YANDEX.EXE"""  "LowSection=""*"" HighSection=""*"""
+          "ProductName=""YANDEX INSTALLER"" BinaryName=""YANDEX.EXE"""  "LowSection=""*"" HighSection=""*""" `
+          "ProductName=""ЯНДЕКС.ДИСК"" BinaryName=""*"""  "LowSection=""*"" HighSection=""*"""
 
   addrules "Zona"  "O=DESTINY MEDIA, L=MOSCOW, S=MOSCOW, C=RU"
 
