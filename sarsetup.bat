@@ -35,6 +35,7 @@ function DoRules {
   addrules "Digital Pine"  "O=DIGITAL PINE LLC, L=MOSCOW, S=MOSCOW REGION, C=RU"
   addrules "EPICPLAY"  "O=EPICPLAY LLC, L=IRVINE, S=CALIFORNIA, C=US"
   addrules "EPICSCALE"  "O=EPIC SCALE, INC., L=OAKLAND, S=CALIFORNIA, C=US"
+  addrules "Files Info" "O=FILES INFO, L=SAN FRANCISCO, S=CALIFORNIA, C=US"
   addrules "Finedream Invest"  "O=FINEDREAM INVEST LTD, L=LONDON, S=HAMPSTEAD, C=GB"
   addrules "Foto-Tsentr"  "O=LLC ``FOTO-TSENTR ``, L=MYKOLAYIV, S=MYKOLAYIVSKA, C=UA"
   addrules "Giner (SearchProtect/XTAB)"  "O=GINER TECH INC, L=WILMINGTON, S=DELAWARE, C=US"
