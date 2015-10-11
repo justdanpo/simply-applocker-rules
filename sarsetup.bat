@@ -15,9 +15,9 @@ function DoRules {
           "ProductName=""ANVIR TASK MANAGER FREE"" BinaryName=""ANVIR.EXE"""  "LowSection=""7.5.2.0"" HighSection=""*"""
 
   addrules "AOL"  "O=AOL INC., L=DULLES, S=VIRGINIA, C=US"
-
   addrules "Подписано O=APP BUD, L=SANTA MONICA, S=CALIFORNIA, C=US"  "O=APP BUD, L=SANTA MONICA, S=CALIFORNIA, C=US"
-
+  addrules "Artex Management"  "O=ARTEX MANAGEMENT S. A., L=PANAMA CITY, C=PA"
+  addrules "Artex Management"  "O=ARTEX MANAGEMENT S.A., L=PANAMA CITY, S=OUTSIDE UNITED STATES, C=PA"
   addrules "ASK"  "O=ASK.COM, L=OAKLAND, S=CALIFORNIA, C=US"
   addrules "ASK"  "O=ASK.COM, L=OAKLAND, S=CA, C=US"
   addrules "ASK network"  "O=APN LLC, L=OAKLAND, S=CALIFORNIA, C=US"
