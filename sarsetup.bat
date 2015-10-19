@@ -25,6 +25,7 @@ function DoRules {
   addrules "Подписано O=BEIJING AMAZGAME AGE INTERNET TECHNOLOGY CO., LTD., L=BEIJING, S=BEIJING, C=CN"  "O=BEIJING AMAZGAME AGE INTERNET TECHNOLOGY CO., LTD., L=BEIJING, S=BEIJING, C=CN"
   addrules "BROWSEBIT malware"  "O=BROWSEBIT, L=SANTA MONICA, S=CALIFORNIA, C=US"
   addrules "Cart Crunch Israel LTD"  "O=CART CRUNCH ISRAEL LTD, L=GIVATAYIM, S=NA, C=IL"
+  addrules "ClaraLabSoftware"  "O=CLARALABSOFTWARE, L=PARIS, C=FR"
   addrules "ClientConnect LTD"  "O=ClientConnect LTD, L=Ness Ziona, S=Israel', C=IL"
   addrules "CNET"  "O=CBS INTERACTIVE, L=SAN FRANCISCO, S=CALIFORNIA, C=US"
   addrules "Conduit LTD."  "O=CONDUIT LTD., L=NESS ZIONA, S=ISRAEL, C=IL"
