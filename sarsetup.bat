@@ -94,6 +94,7 @@ function DoRules {
   addrules "Woodtale Technology Inc"  "O=WOODTALE TECHNOLOGY INC, L=WILMINGTON, S=DELAWARE, C=US"
   addrules "Word Shark"  "O=WORD SHARK, L=SAN DIEGO, S=CALIFORNIA, C=US"
   addrules "Yahoo"  "O=YAHOO! INC., L=SANTA CLARA, S=CA, C=US"
+  addrules "Yahoo"  "O=YAHOO! INC., L=SUNNYVALE, S=CA, C=US"
   addrules "Yandex"  "O=OOO YANDEX, L=MOSCOW, S=MOSCOW, C=RU"
 
   addrules "Yandex"  "O=YANDEX LLC, L=MOSCOW, S=MOSCOW, C=RU"  "*"  "*" `
