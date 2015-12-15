@@ -57,6 +57,9 @@ function DoRules {
   addrules "Mail"  "O=LLC MAIL.RU, L=MOSCOW, S=MOSCOW, C=RU"  "*"  "*" `
           "ProductName=""MAIL.RU АГЕНТ"" BinaryName=""MAGENT.EXE"""  "LowSection=""6.0.0.0"" HighSection=""*"""
 
+  addrules "Mail"  "O=MAIL.RU LLC, L=MOSCOW, S=MOSCOW, C=RU"  "*"  "*" `
+          "ProductName=""MAIL.RU АГЕНТ"" BinaryName=""MAGENT.EXE"""  "LowSection=""*"" HighSection=""*"""
+
   addrules "McAfee"  "O=MCAFEE, INC., L=SANTA CLARA, S=CALIFORNIA, C=US"
   addrules "MediaGet"  "O=&quot;MEDIA, LLC&quot;, L=ST. PETERSBURG, S=RUSSIAN FEDERATION, C=RU"
   addrules "MediaGet"  "O=BANNER LLC, L=ST.PETERSBURG, S=RUSSIA, C=RU"
@@ -69,6 +72,9 @@ function DoRules {
   addrules "LLC Net Soft"  "O=LLC &quot;NET SOFT&quot;, L=UZHHOROD, S=ZAKARPATSKA, C=UA"
   addrules "Obnovi Soft"  "O=KHEIFETS ILIYA MIKHAILOVICH IP, L=MOSCOW, S=MOSCOW, C=RU"
   addrules "Obnovi Soft"  "E=SUBMIT@ANVIR.COM, CN=ILYA KHEYFETS, L=MOSCOW, S=MOSKVA OBLAST, C=RU"
+  addrule "Dll"  "OpenCandy"  "O=OPENCANDY INC., L=SAN DIEGO, S=CALIFORNIA, C=US"
+  addrule "Dll"  "OpenCandy"  "O=OPENCANDY, L=SAN DIEGO, S=CA, C=US"
+  addpathrule "Dll"  "OpenCandy"  "*\OCSetupHlp.dll"
   addrules "PortRu"  "O=OOO PORT.RU, L=MOSCOW, S=MOSCOW, C=RU"
   addrules "PriceMeter"  "O=PRICEMETER, L=TEL AVIV, S=TEL AVIV, C=IL"
   addrules "QIP"  "O=OOO RUSSKIE INTERNET RESHENIJA, L=MOSCOW, S=MOSCOW, C=RU"
@@ -120,7 +126,6 @@ $rules = @{
 "Exe" =
 @"
 <AppLockerPolicy Version="1">
-  <RuleCollection Type="Dll" EnforcementMode="NotConfigured" />
   <RuleCollection Type="Script" EnforcementMode="NotConfigured" />
   <RuleCollection Type="Appx" EnforcementMode="Enabled">
     <FilePathRule Id="0a233466-ebac-40c8-ab14-ff4756c58684" Name="Все" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
@@ -141,9 +146,19 @@ $rules = @{
   </RuleCollection>
   <RuleCollection Type="Msi" EnforcementMode="Enabled">`n
 "@
+"Dll" =
+@"
+    <FilePathRule Id="93534678-c068-4797-8b54-d0c349cef1cd" Name="Все" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="*" />
+      </Conditions>
+    </FilePathRule>
+  </RuleCollection>
+  <RuleCollection Type="Dll" EnforcementMode="Enabled">`n
+"@
 "Footer" =
 @"
-     <FilePathRule Id="93534678-c068-4797-8b54-d0c349cef1cd" Name="Все" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+     <FilePathRule Id="fe64f59f-6fca-45e5-a731-0f6715327c38" Name="Все" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
        <Conditions>
          <FilePathCondition Path="*" />
        </Conditions>
@@ -251,6 +266,8 @@ $compatuuids = @{
   "Msi__O=YAHOO! INC., L=SANTA CLARA, S=CA, C=US" = "11cbc4c0-be77-8124-25a0-fea7d572a101"
   "Msi__O=YANDEX LLC, L=MOSCOW, S=MOSCOW, C=RU" = "cff3a39c-9d87-11e4-89d3-123b93f75cba"
   "Msi__O=YUNA SOFTWARE LIMITED, L=ST. HELIER, S=JERSEY, C=GB" = "c8a2d46f-0634-cdff-307e-2bc7a909a8e3"
+  "Dll__O=OPENCANDY INC., L=SAN DIEGO, S=CALIFORNIA, C=US" = "90477d4c-adae-434d-8d6a-c6117e33e18e"
+  "DllPath__*\OCSETUPHLP.DLL" = "c790394c-7fd7-4228-9298-694417430554"
 }
 
 
@@ -262,7 +279,7 @@ param(
 [string]$productname = "*",
 [string]$binaryname = "*"
 )
-  if( @("Exe","Msi") -notcontains $rulecollectiontype) { Write-Error "wrong rule $rulecollectiontype $name $publishername"; exit }
+  if( @("Exe","Msi","Dll") -notcontains $rulecollectiontype) { Write-Error "wrong rule $rulecollectiontype $name $publishername"; exit }
 
   $keyname = $rulecollectiontype + "__" + $publishername
   if ($compatuuids.ContainsKey($keyname))
@@ -312,14 +329,50 @@ param(
 }
 
 function addrules {
-  if( @("Exe","Msi") -contains $args[0]) { Write-Error "wrong rule $args"; exit }
+  if( @("Exe","Msi","Dll") -icontains $args[0]) { Write-Error "wrong rule $args"; exit }
   addrule  "Exe"  @args
   addrule  "Msi"  @args
 }
 
+function addpathrule {
+param(
+[string]$rulecollectiontype,
+[string]$name,
+[string]$path
+)
+  if( @("Exe","Msi","Dll") -notcontains $rulecollectiontype) { Write-Error "wrong rule $rulecollectiontype $name $path"; exit }
+
+  $keyname = $rulecollectiontype + "Path__" + $path.ToUpper()
+  if ($compatuuids.ContainsKey($keyname))
+  {
+    $id = $compatuuids[$keyname]
+  }else
+  {
+    $id = ([guid] (new-object -TypeName System.Security.Cryptography.MD5CryptoServiceProvider).ComputeHash((new-object -TypeName System.Text.UTF8Encoding).GetBytes($keyname))).Guid
+  }
+
+  $ret = @"
+    <FilePathRule Id="$id" Name="$name" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="$path" /> 
+      </Conditions>
+    </FilePathRule>`n
+"@
+
+  $rules[$rulecollectiontype] += $ret
+
+  return
+}
+
+function addpathrules {
+  if( @("Exe","Msi","Dll") -icontains $args[0]) { Write-Error "wrong rule $args"; exit }
+  addpathrule  "Exe"  @args
+  addpathrule  "Msi"  @args
+}
+
 function SaveFile {
   DoRules
-  $rules["Exe"] + $rules["Msi"] + $rules["Footer"] | Out-File $fname -encoding utf8
+  $rules["Exe"] + $rules["Msi"] + $rules["Dll"]+ $rules["Footer"] | Out-File $fname -encoding utf8
 }
 
 function GetAdminRights {
