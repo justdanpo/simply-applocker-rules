@@ -72,6 +72,7 @@ function DoRules {
   addrules "LLC Net Soft"  "O=LLC &quot;NET SOFT&quot;, L=UZHHOROD, S=ZAKARPATSKA, C=UA"
   addrules "Obnovi Soft"  "O=KHEIFETS ILIYA MIKHAILOVICH IP, L=MOSCOW, S=MOSCOW, C=RU"
   addrules "Obnovi Soft"  "E=SUBMIT@ANVIR.COM, CN=ILYA KHEYFETS, L=MOSCOW, S=MOSKVA OBLAST, C=RU"
+  addrules "OpenProg"  "O=INET PRODUKT, L=SARANSK, S=THE REPUBLIC OF MORDOVIA, C=RU"
   addrule "Dll"  "OpenCandy"  "O=OPENCANDY INC., L=SAN DIEGO, S=CALIFORNIA, C=US"
   addrule "Dll"  "OpenCandy"  "O=OPENCANDY, L=SAN DIEGO, S=CA, C=US"
   addpathrule "Dll"  "OpenCandy"  "*\OCSetupHlp.dll"
