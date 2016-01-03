@@ -90,6 +90,7 @@ function DoRules {
   addrules "Somoto"  "O=SOMOTO LIMITED, L=TEL AVIV, S=TEL AVIV, C=IL"
   addrules "SourceForge"  "O=DOVE MAX (NEW MEDIA HOLDINGS LTD.), L=TEL AVIV, C=IL"
   addrules "SourceForge"  "O=IC FORGE, L=TEL AVIV, S=ISRAEL, C=IL"
+  addrules "SourceForge"  "O=PROMPT FUNNEL (NEW MEDIA HOLDINGS LTD.), L=TEL AVIV, C=IL"
   addrules "SourceForge"  "O=SPEEDYMAX (NEW MEDIA HOLDINGS LTD), L=TEL AVIV, C=IL"
   addrules "SourceForge"  "O=THEORY MEDIA (FRIED COOKIE LTD), L=TEL AVIV, C=IL"
   addrules "Подписано O=SKYMONK SOLUTIONS LIMITED, L=TORTOLA, S=TORTOLA, C=VG"  "O=SKYMONK SOLUTIONS LIMITED, L=TORTOLA, S=TORTOLA, C=VG"
