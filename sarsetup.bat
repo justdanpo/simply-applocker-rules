@@ -431,7 +431,9 @@ try
     Set-AppLockerPolicy -XMLPolicy $fname
   }
 
-  set-service AppIDSvc -StartupType Automatic
+  if( (Get-CimInstance -ClassName Win32_Service -Filter "Name = 'AppIDSvc'").StartMode -ine "Auto" ) {
+    Set-Service AppIDSvc -StartupType Automatic
+  }
   Restart-Service AppIDSvc
 
   Write-Host "OK"
