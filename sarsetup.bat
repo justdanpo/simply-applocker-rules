@@ -130,11 +130,13 @@ $rules = @{
 <AppLockerPolicy Version="1">
   <RuleCollection Type="Script" EnforcementMode="NotConfigured" />
   <RuleCollection Type="Appx" EnforcementMode="Enabled">
-    <FilePathRule Id="0a233466-ebac-40c8-ab14-ff4756c58684" Name="Все" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+    <FilePublisherRule Id="4946b6a3-af1a-435f-8e54-0d1f95b21f63" Name="Все" Description="." UserOrGroupSid="S-1-1-0" Action="Allow">
       <Conditions>
-        <FilePathCondition Path="*" />
+        <FilePublisherCondition PublisherName="*" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
+        </FilePublisherCondition>
       </Conditions>
-    </FilePathRule>
+    </FilePublisherRule>
   </RuleCollection>
   <RuleCollection Type="Exe" EnforcementMode="Enabled">`n
 "@
