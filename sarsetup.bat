@@ -55,7 +55,8 @@ function DoRules {
   addrules "Подписано O=KOMETA LLC, L=MOSCOW, S=MOSCOW REGION, C=RU"  "O=KOMETA LLC, L=MOSCOW, S=MOSCOW REGION, C=RU"
 
   addrules "Mail"  "O=LLC MAIL.RU, L=MOSCOW, S=MOSCOW, C=RU"  "*"  "*" `
-          "ProductName=""MAIL.RU АГЕНТ"" BinaryName=""MAGENT.EXE"""  "LowSection=""6.0.0.0"" HighSection=""*"""
+          "ProductName=""MAIL.RU АГЕНТ"" BinaryName=""MAGENT.EXE"""  "LowSection=""6.0.0.0"" HighSection=""*""" `
+          "ProductName=""SKYFORGE"" BinaryName=""*"""  "LowSection=""*"" HighSection=""*"""
 
   addrules "Mail"  "O=MAIL.RU LLC, L=MOSCOW, S=MOSCOW, C=RU"  "*"  "*" `
           "ProductName=""MAIL.RU АГЕНТ"" BinaryName=""MAGENT.EXE"""  "LowSection=""*"" HighSection=""*"""
