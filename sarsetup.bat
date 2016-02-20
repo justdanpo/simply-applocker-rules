@@ -434,12 +434,17 @@ try
     Set-AppLockerPolicy -XMLPolicy $fname
   }
 
-  if( (Get-WmiObject -Class Win32_Service -Filter "Name = 'AppIDSvc'").StartMode -ine "Auto" ) {
-    Set-Service AppIDSvc -StartupType Automatic
+  try
+  {
+    Set-Service AppIDSvc -StartupType Automatic -ErrorAction Stop
+    Restart-Service AppIDSvc
+    Write-Host "OK"
   }
-  Restart-Service AppIDSvc
+  catch
+  {
+    Write-Warning "Cannot setup AppIDSvc"
+  }
 
-  Write-Host "OK"
 }
 catch
 {
