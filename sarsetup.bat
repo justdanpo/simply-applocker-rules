@@ -63,6 +63,7 @@ function DoRules {
   addrules "Mail"  "O=MAIL.RU LLC, L=MOSCOW, S=MOSCOW, C=RU"  "*"  "*" `
           "ProductName=""MAIL.RU АГЕНТ"" BinaryName=""MAGENT.EXE"""  "LowSection=""*"" HighSection=""*"""
 
+  addrules "MaxPlatform"  "O=MAXPLATFORM (NEW MEDIA HOLDINGS LTD), L=TEL AVIV, C=IL"
   addrules "McAfee"  "O=MCAFEE, INC., L=SANTA CLARA, S=CALIFORNIA, C=US"
   addrules "MediaGet"  "O=&quot;MEDIA, LLC&quot;, L=ST. PETERSBURG, S=RUSSIAN FEDERATION, C=RU"
   addrules "MediaGet"  "O=BANNER LLC, L=ST.PETERSBURG, S=RUSSIA, C=RU"
