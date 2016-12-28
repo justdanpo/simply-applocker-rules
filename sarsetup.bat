@@ -36,6 +36,7 @@ function DoRules {
   addrules "Digital Pine"  "O=&quot;DIGITAL PINE, LLC - ООО `”ДИДЖИТАЛ ПАЙН`”&quot;, L=MOSCOW, S=MOSCOW CITY, C=RU"
   addrules "Digital Pine"  "O=&quot;DIGITAL PINE, LLC&quot;, L=MOSCOW, C=RU"
   addrules "Digital Pine"  "O=DIGITAL PINE LLC, L=MOSCOW, S=MOSCOW REGION, C=RU"
+  addrules "DRIVERPACK"  "O=KUZYAKOV ARTUR VYACHESLAVOVICH IP, L=MOSCOW, S=MOSCOW, C=RU"  "DRIVERPACK"
   addrules "EPICPLAY"  "O=&quot;EPICPLAY, LLC&quot;, L=IRVINE, S=CA, C=US"
   addrules "EPICPLAY"  "O=EPICPLAY LLC, L=IRVINE, S=CALIFORNIA, C=US"
   addrules "EPICPLAY"  "O=EPICPLAY LLC, L=NEWPORT BEACH, S=CALIFORNIA, C=US"
