@@ -7,6 +7,7 @@ $fname= 'sarules.xml'
 function DoRules {
   addrule "Exe"  "2GISTrayNotifier"  "O=DOUBLEGIS, L=NOVOSIBIRSK, S=NOVOSIBIRSKAYA OBLAST', C=RU"  "2ГИС"  "2GISTRAYNOTIFIER.EXE"
 
+  addrules "AfterDawn"  "O=AFTERDAWN OY, L=OULO, C=FI"
   addrules "AlterGeo"  "O=WI2GEO LTD, L=MOSCOW, S=MOSCOW, C=RU"
 
   addrules "AnVir"  "O=ANVIR SOFTWARE, L=MOSCOW, S=MOSCOW, C=RU"  "*"  "*" `
@@ -25,6 +26,7 @@ function DoRules {
   addrules "Подписано O=BEIJING AMAZGAME AGE INTERNET TECHNOLOGY CO., LTD., L=BEIJING, S=BEIJING, C=CN"  "O=BEIJING AMAZGAME AGE INTERNET TECHNOLOGY CO., LTD., L=BEIJING, S=BEIJING, C=CN"
   addrules "BROWSEBIT malware"  "O=BROWSEBIT, L=SANTA MONICA, S=CALIFORNIA, C=US"
   addrules "Cart Crunch Israel LTD"  "O=CART CRUNCH ISRAEL LTD, L=GIVATAYIM, S=NA, C=IL"
+  addrules "chip.de"  "O=CHIP DIGITAL GMBH, L=MUNICH, S=BAVARIA, C=DE"
   addrules "ClaraLabSoftware"  "O=CLARALABSOFTWARE, L=PARIS, C=FR"
   addrules "ClientConnect LTD"  "O=CLIENTCONNECT LTD, L=NESS ZIONA, S=ISRAEL', C=IL"
   addrules "ClientConnect LTD"  "O=CLIENTCONNECT LTD, L=NESS ZIONA, S=ISRAEL, C=IL"
@@ -36,6 +38,7 @@ function DoRules {
   addrules "Digital Pine"  "O=&quot;DIGITAL PINE, LLC - ООО `”ДИДЖИТАЛ ПАЙН`”&quot;, L=MOSCOW, S=MOSCOW CITY, C=RU"
   addrules "Digital Pine"  "O=&quot;DIGITAL PINE, LLC&quot;, L=MOSCOW, C=RU"
   addrules "Digital Pine"  "O=DIGITAL PINE LLC, L=MOSCOW, S=MOSCOW REGION, C=RU"
+  addrules "dobreprogramy"  "O=DOBREPROGRAMY SP. Z O.O., L=WROCLAW, C=PL"
   addrules "DRIVERPACK"  "O=KUZYAKOV ARTUR VYACHESLAVOVICH IP, L=MOSCOW, S=MOSCOW, C=RU"  "DRIVERPACK"
   addrules "EPICPLAY"  "O=&quot;EPICPLAY, LLC&quot;, L=IRVINE, S=CA, C=US"
   addrules "EPICPLAY"  "O=EPICPLAY LLC, L=IRVINE, S=CALIFORNIA, C=US"
@@ -89,6 +92,7 @@ function DoRules {
   addrules "RAMBLER"  "O=RAMBLER INTERNET HOLDINGS LLC, L=MOSCOW, S=RUSSIAN FEDERATION, C=RU"
   addrules "Rambler"  "O=RAMBLER INTERNET HOLDINGS, LLC, L=MOSCOW, S=MOSCOW, C=RU"
   addrules "Reg Organizer"  "O=KONSTANTIN POLYAKOV, L=EKATERINBURG, S=N/A, C=RU"
+  addrules "Sivently SRL"  "O=SIVENSYS SRL, L=IASI, C=RO"
   addrules "Somoto"  "O=SOMOTO LTD, L=TEL AVIV, S=ISRAEL, C=IL"
   addrules "Somoto"  "O=SOMOTO LTD., L=TEL AVIV, S=--, C=IL"
   addrules "Somoto"  "O=SOMOTO ISRAEL LTD., L=TEL AVIV, S=--, C=IL"
