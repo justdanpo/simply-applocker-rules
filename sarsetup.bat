@@ -62,10 +62,10 @@ function DoRules {
 
   addrules "Mail"  "O=LLC MAIL.RU, L=MOSCOW, S=MOSCOW, C=RU"  "*"  "*" `
           "ProductName=""MAIL.RU АГЕНТ"" BinaryName=""MAGENT.EXE"""  "LowSection=""6.0.0.0"" HighSection=""*""" `
-          "ProductName=""SKYFORGE"" BinaryName=""*"""  "LowSection=""*"" HighSection=""*"""
+          "ProductName=""SKYFORGE"" BinaryName=""*"""  "LowSection=""0.0.0.0"" HighSection=""*"""
 
   addrules "Mail"  "O=MAIL.RU LLC, L=MOSCOW, S=MOSCOW, C=RU"  "*"  "*" `
-          "ProductName=""MAIL.RU АГЕНТ"" BinaryName=""MAGENT.EXE"""  "LowSection=""*"" HighSection=""*"""
+          "ProductName=""MAIL.RU АГЕНТ"" BinaryName=""MAGENT.EXE"""  "LowSection=""0.0.0.0"" HighSection=""*"""
 
   addrules "MaxPlatform"  "O=MAXPLATFORM (NEW MEDIA HOLDINGS LTD), L=TEL AVIV, C=IL"
   addrules "McAfee"  "O=MCAFEE, INC., L=SANTA CLARA, S=CALIFORNIA, C=US"
@@ -111,6 +111,7 @@ function DoRules {
   addrules "Symantec"  "O=SYMANTEC CORPORATION, L=SANTA MONICA, S=CALIFORNIA, C=US"
   addrules "techgile"  "O=TECHGILE, L=SANTA MONICA, S=CALIFORNIA, C=US"
   addrules "Подписано O=TUTO4PC.COM, L=PARIS, S=ILE-DE-FRANCE, C=FR"  "O=TUTO4PC.COM, L=PARIS, S=ILE-DE-FRANCE, C=FR"
+  addrules "ubar"  "O=IP IAROSLAVSKII ANTON ANDREEVICH, L=PETROZAVODSK, S=REPUBLIC OF KARELIA, C=RU"
   addrules "Uniblue"  "O=UNIBLUE SYSTEMS, L=MSIDA, S=MSIDA, C=MT"
   addrules "Подписано O=UPDATESTAR GMBH, L=BERLIN, S=BERLIN, C=DE"  "O=UPDATESTAR GMBH, L=BERLIN, S=BERLIN, C=DE"
   addrules "Web Amplified"  "O=WEB AMPLIFIED, L=SAN DIEGO, S=CALIFORNIA, C=US"
@@ -123,9 +124,9 @@ function DoRules {
   addrules "Yandex"  "O=OOO YANDEX, L=MOSCOW, S=MOSCOW, C=RU"
 
   addrules "Yandex"  "O=YANDEX LLC, L=MOSCOW, S=MOSCOW, C=RU"  "*"  "*" `
-          "ProductName=""YANDEX"" BinaryName=""BROWSER.EXE"""  "LowSection=""*"" HighSection=""*""" `
-          "ProductName=""YANDEX INSTALLER"" BinaryName=""YANDEX.EXE"""  "LowSection=""*"" HighSection=""*""" `
-          "ProductName=""ЯНДЕКС.ДИСК"" BinaryName=""*"""  "LowSection=""*"" HighSection=""*"""
+          "ProductName=""YANDEX"" BinaryName=""BROWSER.EXE"""  "LowSection=""0.0.0.0"" HighSection=""*""" `
+          "ProductName=""YANDEX INSTALLER"" BinaryName=""YANDEX.EXE"""  "LowSection=""0.0.0.0"" HighSection=""*""" `
+          "ProductName=""ЯНДЕКС.ДИСК"" BinaryName=""*"""  "LowSection=""0.0.0.0"" HighSection=""*"""
 
   addrules "Zona"  "O=DESTINY MEDIA, L=MOSCOW, S=MOSCOW, C=RU"
 
@@ -201,7 +202,7 @@ param(
     <FilePublisherRule Id="$id" Name="$name" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
       <Conditions>
         <FilePublisherCondition PublisherName="$publishername" ProductName="$productname" BinaryName="$binaryname">
-          <BinaryVersionRange LowSection="*" HighSection="*" />
+          <BinaryVersionRange LowSection="0.0.0.0" HighSection="*" />
         </FilePublisherCondition>
       </Conditions>`n
 "@
@@ -216,7 +217,7 @@ param(
       $condition = $args[$i++];
       if(-not $condition) { break }
       if($condition -eq "addrule") { Write-Error "wrong rule $id $name"; exit }
-      $version = $args[$i++]; if(-not $version) { $version = "LowSection=""*"" HighSection=""*""" }
+      $version = $args[$i++]; if(-not $version) { $version = "LowSection=""0.0.0.0"" HighSection=""*""" }
 
       $ret += @"
         <FilePublisherCondition PublisherName="$publishername" $condition>
