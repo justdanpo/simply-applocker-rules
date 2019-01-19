@@ -33,6 +33,7 @@ function DoRules {
   addrules "CNET"  "O=CBS INTERACTIVE, L=SAN FRANCISCO, S=CALIFORNIA, C=US"
   addrules "CNET"  "O=PROINSTALL APPLICATIONS SRL, L=BUCURESTI, C=RO"
   addrules "Conduit LTD."  "O=CONDUIT LTD., L=NESS ZIONA, S=ISRAEL, C=IL"
+  addrules "Conduit LTD."  "O=CONDUIT LTD., S=ISRAEL, C=IL"
   addrules "Daemon Tools"  "O=DT SOFT LTD, L=BELIZE CITY, S=BELIZE, C=BZ"
   addrules "Подписано O=DEAL KEEPER, L=SANTA MONICA, S=CALIFORNIA, C=US"  "O=DEAL KEEPER, L=SANTA MONICA, S=CALIFORNIA, C=US"
   addrules "Digital Pine"  "O=&quot;DIGITAL PINE, LLC - ООО `”ДИДЖИТАЛ ПАЙН`”&quot;, L=MOSCOW, S=MOSCOW CITY, C=RU"
@@ -58,6 +59,8 @@ function DoRules {
   addrules "IAC"  "O=IAC, L=WHITE PLAINS, S=NEW YORK, C=US"
   addrules "ICQ"  "O=ICQ, L=TEL AVIV, S=ISRAEL, C=IL"
   addrules "ICQ"  "O=ICQ LTD, L=TEL AVIV, S=ALBERTA, C=IL"
+  addrules "Info Software" "O=INFO SOFTWARE LP, L=EDINBURGH, S=SCOTLAND, C=GB"
+  addrules "Info Software" "O=INFO SOFTWARE, L=EDINBURGH, S=SCOTLAND, C=GB"
   addrules "Подписано O=KOMETA LLC, L=MOSCOW, S=MOSCOW REGION, C=RU"  "O=KOMETA LLC, L=MOSCOW, S=MOSCOW REGION, C=RU"
 
   addrules "Mail"  "O=LLC MAIL.RU, L=MOSCOW, S=MOSCOW, C=RU"  "*"  "*" `
@@ -104,6 +107,7 @@ function DoRules {
   addrules "SourceForge"  "O=SPEEDYMAX (NEW MEDIA HOLDINGS LTD), L=TEL AVIV, C=IL"
   addrules "SourceForge"  "O=THEORY MEDIA (FRIED COOKIE LTD), L=TEL AVIV, C=IL"
   addrules "Подписано O=SKYMONK SOLUTIONS LIMITED, L=TORTOLA, S=TORTOLA, C=VG"  "O=SKYMONK SOLUTIONS LIMITED, L=TORTOLA, S=TORTOLA, C=VG"
+  addrules "SoftBrain Technologies Ltd." "O=SOFTBRAIN TECHNOLOGIES LTD., L=OR YEHUDA, S=ISRAEL, C=IL"
   addrules "Softdeluxe"  "O=Softdeluxe Ltd., L=Dubna, S=Moscow region', C=RU"
   addrules "SPEEDUPMYPC"  "O=UNIBLUE SYSTEMS, L=BIRKIRKARA, S=BIRKIRKARA, C=MT"  "SPEEDUPMYPC"  "*"
   addrules "SUPERFISH"  "O=SUPERFISH INC., L=GRANDVILLE, S=MICHIGAN, C=US"
@@ -128,6 +132,8 @@ function DoRules {
           "ProductName=""YANDEX INSTALLER"" BinaryName=""YANDEX.EXE"""  "LowSection=""0.0.0.0"" HighSection=""*""" `
           "ProductName=""ЯНДЕКС.ДИСК"" BinaryName=""*"""  "LowSection=""0.0.0.0"" HighSection=""*"""
 
+  addrules "Zaxar Ltd" "O=ZAXAR LTD, L=LIMASSOL, S=LIMASSOL, C=CY"
+  addrules "Zaxar Ltd" "O=ZAXAR LTD, L=LIMASSOL, S=CYPRUS, C=CY"
   addrules "Zona"  "O=DESTINY MEDIA, L=MOSCOW, S=MOSCOW, C=RU"
 
   return
