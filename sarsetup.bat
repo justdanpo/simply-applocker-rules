@@ -98,6 +98,7 @@ function DoRules {
   addrules "Rambler"  "O=RAMBLER INTERNET HOLDINGS, LLC, L=MOSCOW, S=MOSCOW, C=RU"
   addrules "Reg Organizer"  "O=KONSTANTIN POLYAKOV, L=EKATERINBURG, S=N/A, C=RU"
   addrules "Sivently SRL"  "O=SIVENSYS SRL, L=IASI, C=RO"
+  addrules "SmartCloud"  "O=北京布丁跳跳科技有限公司, L=北京市, S=北京市, C=CN"
   addrules "Somoto"  "O=SOMOTO LTD, L=TEL AVIV, S=ISRAEL, C=IL"
   addrules "Somoto"  "O=SOMOTO LTD., L=TEL AVIV, S=--, C=IL"
   addrules "Somoto"  "O=SOMOTO ISRAEL LTD., L=TEL AVIV, S=--, C=IL"
